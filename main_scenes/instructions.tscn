@@ -1,0 +1,268 @@
+[gd_scene load_steps=12 format=3 uid="uid://cu7pev5q5hmjw"]
+
+[ext_resource type="Texture2D" uid="uid://cwv38osdaraqs" path="res://assets/tilesets/grass.png" id="1_hv01i"]
+[ext_resource type="Script" path="res://scripts/instructions.gd" id="1_qc53a"]
+[ext_resource type="Texture2D" uid="uid://caj273bmyalnj" path="res://assets/tilesets/decor_16x16.png" id="2_ex035"]
+[ext_resource type="Texture2D" uid="uid://b2y71j5mh6sia" path="res://assets/UI6.png" id="3_84x36"]
+[ext_resource type="FontFile" uid="uid://dbn5d3orf65yw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="4_x26me"]
+[ext_resource type="Texture2D" uid="uid://dp645hg2mq1eq" path="res://assets/UI8.png" id="5_ct0rp"]
+[ext_resource type="FontFile" uid="uid://1fw4qx36s5h2" path="res://assets/fonts/PixelOperator8.ttf" id="6_g0ad4"]
+[ext_resource type="AudioStream" uid="uid://57kmb2ip6r5b" path="res://music/Juhani Junkala [Retro Game Music Pack] Ending.wav" id="8_3hqmy"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gywp"]
+texture = ExtResource("1_hv01i")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mmhn4"]
+texture = ExtResource("2_ex035")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_x66rq"]
+sources/0 = SubResource("TileSetAtlasSource_8gywp")
+sources/1 = SubResource("TileSetAtlasSource_mmhn4")
+
+[node name="Instructions" type="Node2D"]
+script = ExtResource("1_qc53a")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_x66rq")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608, 0, 0, 262144, 0, 0, 327680, 0, 0, 393216, 0, 0, 458752, 0, 0, 524288, 0, 0, 589824, 0, 0, 655360, 0, 0, 720896, 0, 0, 786432, 131073, 0, 851968, 0, 0, 1, 0, 0, 65537, 0, 0, 131073, 65537, 2, 196609, 0, 0, 262145, 131073, 0, 327681, 0, 0, 393217, 65537, 0, 458753, 196609, 1, 524289, 0, 0, 589825, 0, 0, 655361, 131073, 0, 720897, 0, 0, 786433, 0, 0, 851969, 0, 0, 2, 0, 0, 65538, 0, 0, 131074, 196609, 0, 196610, 0, 0, 262146, 196609, 2, 327682, 0, 0, 393218, 0, 0, 458754, 0, 0, 524290, 0, 0, 589826, 0, 0, 655362, 131073, 0, 720898, 131073, 2, 786434, 196609, 0, 851970, 0, 0, 3, 0, 0, 65539, 1, 0, 131075, 0, 0, 196611, 1, 2, 262147, 1, 2, 327683, 0, 0, 393219, 0, 0, 458755, 196609, 2, 524291, 0, 0, 589827, 0, 0, 655363, 131073, 0, 720899, 0, 0, 786435, 0, 0, 851971, 0, 0, 4, 0, 0, 65540, 0, 0, 131076, 196609, 0, 196612, 0, 0, 262148, 0, 0, 327684, 196609, 1, 393220, 131073, 0, 458756, 0, 0, 524292, 65537, 0, 589828, 0, 0, 655364, 0, 0, 720900, 0, 0, 786436, 0, 0, 851972, 0, 0, 5, 196609, 1, 65541, 0, 0, 131077, 65537, 0, 196613, 65537, 0, 262149, 0, 0, 327685, 65537, 2, 393221, 0, 0, 458757, 196609, 2, 524293, 1, 2, 589829, 0, 0, 655365, 131073, 0, 720901, 0, 0, 786437, 0, 0, 851973, 0, 0, 6, 0, 0, 65542, 196609, 0, 131078, 0, 0, 196614, 196609, 0, 262150, 0, 0, 327686, 0, 0, 393222, 1, 0, 458758, 0, 0, 524294, 0, 0, 589830, 0, 0, 655366, 0, 0, 720902, 0, 0, 786438, 196609, 1, 851974, 0, 0, 7, 196609, 2, 65543, 0, 0, 131079, 1, 2, 196615, 131073, 2, 262151, 0, 0, 327687, 0, 0, 393223, 0, 0, 458759, 0, 0, 524295, 0, 0, 589831, 0, 0, 655367, 0, 0, 720903, 0, 0, 786439, 0, 0, 851975, 0, 0, 8, 196609, 2, 65544, 0, 0, 131080, 131073, 0, 196616, 0, 0, 262152, 0, 0, 327688, 196609, 0, 393224, 0, 0, 458760, 0, 0, 524296, 131073, 0, 589832, 0, 0, 655368, 0, 0, 720904, 1, 2, 786440, 0, 0, 851976, 0, 0, 9, 0, 0, 65545, 65537, 0, 131081, 0, 0, 196617, 1, 0, 262153, 65537, 0, 327689, 65537, 0, 393225, 0, 0, 458761, 0, 0, 524297, 1, 0, 589833, 131073, 0, 655369, 0, 0, 720905, 0, 0, 786441, 65537, 0, 851977, 0, 0, 10, 0, 0, 65546, 0, 0, 131082, 0, 0, 196618, 0, 0, 262154, 0, 0, 327690, 131073, 2, 393226, 0, 0, 458762, 0, 0, 524298, 0, 0, 589834, 0, 0, 655370, 0, 0, 720906, 0, 0, 786442, 0, 0, 851978, 0, 0, 11, 0, 0, 65547, 0, 0, 131083, 0, 0, 196619, 1, 0, 262155, 0, 0, 327691, 0, 0, 393227, 0, 0, 458763, 196609, 0, 524299, 196609, 0, 589835, 0, 0, 655371, 0, 0, 720907, 0, 0, 786443, 0, 0, 851979, 0, 0, 12, 0, 0, 65548, 1, 0, 131084, 0, 0, 196620, 0, 0, 262156, 0, 0, 327692, 0, 0, 393228, 0, 0, 458764, 0, 0, 524300, 196609, 0, 589836, 0, 0, 655372, 0, 0, 720908, 0, 0, 786444, 0, 0, 851980, 0, 0, 13, 0, 0, 65549, 65537, 2, 131085, 0, 0, 196621, 65537, 0, 262157, 0, 0, 327693, 0, 0, 393229, 0, 0, 458765, 131073, 0, 524301, 0, 0, 589837, 0, 0, 655373, 0, 0, 720909, 0, 0, 786445, 0, 0, 851981, 1, 0, 14, 65537, 0, 65550, 0, 0, 131086, 0, 0, 196622, 0, 0, 262158, 0, 0, 327694, 0, 0, 393230, 0, 0, 458766, 0, 0, 524302, 0, 0, 589838, 0, 0, 655374, 196609, 2, 720910, 65537, 0, 786446, 0, 0, 851982, 1, 0, 15, 0, 0, 65551, 0, 0, 131087, 0, 0, 196623, 0, 0, 262159, 0, 0, 327695, 0, 0, 393231, 0, 0, 458767, 0, 0, 524303, 0, 0, 589839, 0, 0, 655375, 0, 0, 720911, 0, 0, 786447, 131073, 0, 851983, 0, 0, 16, 196609, 2, 65552, 0, 0, 131088, 0, 0, 196624, 0, 0, 262160, 0, 0, 327696, 0, 0, 393232, 0, 0, 458768, 0, 0, 524304, 0, 0, 589840, 0, 0, 655376, 0, 0, 720912, 0, 0, 786448, 1, 0, 851984, 0, 0, 17, 0, 0, 65553, 196609, 0, 131089, 0, 0, 196625, 0, 0, 262161, 131073, 0, 327697, 0, 0, 393233, 0, 0, 458769, 65537, 2, 524305, 0, 0, 589841, 0, 0, 655377, 0, 0, 720913, 0, 0, 786449, 0, 0, 851985, 0, 0, 18, 0, 0, 65554, 0, 0, 131090, 0, 0, 196626, 0, 0, 262162, 65537, 0, 327698, 0, 0, 393234, 0, 0, 458770, 0, 0, 524306, 1, 0, 589842, 0, 0, 655378, 0, 0, 720914, 0, 0, 786450, 0, 0, 851986, 0, 0, 19, 0, 0, 65555, 65537, 0, 131091, 0, 0, 196627, 65537, 0, 262163, 1, 2, 327699, 0, 0, 393235, 0, 0, 458771, 0, 0, 524307, 131073, 0, 589843, 0, 0, 655379, 0, 0, 720915, 0, 0, 786451, 0, 0, 851987, 131073, 0, 20, 0, 0, 65556, 1, 0, 131092, 0, 0, 196628, 0, 0, 262164, 0, 0, 327700, 0, 0, 393236, 0, 0, 458772, 0, 0, 524308, 65537, 2, 589844, 131073, 0, 655380, 0, 0, 720916, 196609, 1, 786452, 0, 0, 851988, 0, 0, 21, 1, 0, 65557, 0, 0, 131093, 0, 0, 196629, 0, 0, 262165, 0, 0, 327701, 0, 0, 393237, 1, 2, 458773, 0, 0, 524309, 0, 0, 589845, 65537, 0, 655381, 0, 0, 720917, 131073, 2, 786453, 0, 0, 851989, 196609, 0, 22, 0, 0, 65558, 0, 0, 131094, 65537, 0, 196630, 0, 0, 262166, 0, 0, 327702, 0, 0, 393238, 196609, 1, 458774, 0, 0, 524310, 0, 0, 589846, 0, 0, 655382, 0, 0, 720918, 0, 0, 786454, 0, 0, 851990, 131073, 0, 23, 0, 0, 65559, 196609, 0, 131095, 196609, 1, 196631, 0, 0, 262167, 131073, 0, 327703, 0, 0, 393239, 0, 0, 458775, 0, 0, 524311, 0, 0, 589847, 0, 0, 655383, 131073, 0, 720919, 0, 0, 786455, 0, 0, 851991, 0, 0, 24, 131073, 0, 65560, 196609, 0, 131096, 0, 0, 196632, 0, 0, 262168, 0, 0, 327704, 1, 0, 393240, 0, 0, 458776, 0, 0, 524312, 0, 0, 589848, 0, 0, 655384, 196609, 0, 720920, 1, 0, 786456, 0, 0, 851992, 131073, 2)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.705882, 0.705882, 0.705882, 1)
+blend_mode = 1
+
+[node name="Layer0" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="TextureRect" type="TextureRect" parent="Layer0"]
+offset_left = 104.0
+offset_top = 24.0
+offset_right = 280.0
+offset_bottom = 56.0
+texture = ExtResource("3_84x36")
+
+[node name="Label" type="Label" parent="Layer0/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_x26me")
+theme_override_font_sizes/font_size = 16
+text = "How to Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Layer1" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="TextureRect2" type="TextureRect" parent="Layer1"]
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 320.0
+offset_bottom = 200.0
+texture = ExtResource("5_ct0rp")
+
+[node name="Label" type="Label" parent="Layer1/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_g0ad4")
+theme_override_font_sizes/font_size = 8
+text = "Use Arrow Keys or WASD to move
+
+Use Space to attack
+
+Kill enemies, collect coins, level 
+up, and use potions to survive
+
+Press Enter to continue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Layer2" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="TextureRect2" type="TextureRect" parent="Layer2"]
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 320.0
+offset_bottom = 200.0
+texture = ExtResource("5_ct0rp")
+
+[node name="Label" type="Label" parent="Layer2/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_g0ad4")
+theme_override_font_sizes/font_size = 8
+text = "Press escape or P to pause the game
+
+Press F to consume potions
+
+The higher the wave, the tougher the
+enemies
+
+Press Enter to continue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Layer3" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="TextureRect2" type="TextureRect" parent="Layer3"]
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 320.0
+offset_bottom = 200.0
+texture = ExtResource("5_ct0rp")
+
+[node name="Label" type="Label" parent="Layer3/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_g0ad4")
+theme_override_font_sizes/font_size = 8
+text = "Upgrading sword increases the 
+number of swords the player has
+
+Upgrading speed increases the
+movement speed
+
+Press Enter to continue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Layer4" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="TextureRect2" type="TextureRect" parent="Layer4"]
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 320.0
+offset_bottom = 200.0
+texture = ExtResource("5_ct0rp")
+
+[node name="Label" type="Label" parent="Layer4/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_g0ad4")
+theme_override_font_sizes/font_size = 8
+text = "Upgrading knockback increases
+enemy knockback
+
+Upgrading swing increases the
+swing speed of the swords 
+
+Press Enter to continue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Layer5" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="TextureRect2" type="TextureRect" parent="Layer5"]
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 320.0
+offset_bottom = 208.0
+texture = ExtResource("5_ct0rp")
+
+[node name="Label" type="Label" parent="Layer5/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_g0ad4")
+theme_override_font_sizes/font_size = 8
+text = "Skeletons are generally tougher
+than slimes
+
+Grey skeletons > sword skeletons >
+regular skeletons
+
+Orange slimes > purple slimes > 
+blue slimes
+
+Press Enter to continue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Layer6" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+
+[node name="TextureRect2" type="TextureRect" parent="Layer6"]
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 320.0
+offset_bottom = 200.0
+texture = ExtResource("5_ct0rp")
+
+[node name="Label" type="Label" parent="Layer6/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_g0ad4")
+theme_override_font_sizes/font_size = 8
+text = "The tougher the enemy, the more
+likely the coin dropped is worth
+more
+
+Yellow coins = 1, orange coins = 3,
+red coins = 5
+
+Press Enter to Continue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_3hqmy")
+autoplay = true

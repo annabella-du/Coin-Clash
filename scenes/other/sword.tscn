@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://cc1v3l2p0de68"]
+
+[ext_resource type="Script" path="res://scripts/sword.gd" id="1_03rt8"]
+[ext_resource type="Texture2D" uid="uid://cv458eqxnr0k7" path="res://assets/excalibur_.png" id="1_w32br"]
+[ext_resource type="PackedScene" uid="uid://dih6frugu2ap1" path="res://scenes/other/hit_box.tscn" id="3_lo4tg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i6ykp"]
+radius = 7.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4du5l"]
+radius = 7.0
+
+[node name="Sword" type="Area2D" groups=["weapon"]]
+script = ExtResource("1_03rt8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_w32br")
+offset = Vector2(0, -30)
+hframes = 4
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -30)
+shape = SubResource("CapsuleShape2D_i6ykp")
+
+[node name="HitBox" parent="." instance=ExtResource("3_lo4tg")]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0, -30)
+shape = SubResource("CapsuleShape2D_4du5l")
+
+[editable path="HitBox"]

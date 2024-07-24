@@ -1,0 +1,458 @@
+[gd_scene load_steps=47 format=3 uid="uid://cwlw23l5guxoy"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_ribdw"]
+[ext_resource type="Texture2D" uid="uid://wew4n1ugl6yb" path="res://assets/UI3.png" id="2_dautm"]
+[ext_resource type="FontFile" uid="uid://dbn5d3orf65yw" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_06xix"]
+[ext_resource type="Texture2D" uid="uid://7vcnevpbim02" path="res://assets/UI7.png" id="4_m2dir"]
+[ext_resource type="Texture2D" uid="uid://cwv38osdaraqs" path="res://assets/tilesets/grass.png" id="5_7sstw"]
+[ext_resource type="Texture2D" uid="uid://caj273bmyalnj" path="res://assets/tilesets/decor_16x16.png" id="6_1kc4b"]
+[ext_resource type="AudioStream" uid="uid://bebv5vqda8cum" path="res://music/Juhani Junkala [Retro Game Music Pack] Title Screen.wav" id="7_1nicq"]
+[ext_resource type="Texture2D" uid="uid://cbgfibd2ae4oc" path="res://assets/characters/player.png" id="8_6v5jo"]
+[ext_resource type="Texture2D" uid="uid://dlugmyfhkodj0" path="res://assets/characters/slime.png" id="9_xj1nf"]
+[ext_resource type="Texture2D" uid="uid://blpv0kcdws23v" path="res://assets/characters/skeleton_grey.png" id="10_sjb8i"]
+[ext_resource type="Texture2D" uid="uid://dd1lu8ngoe0cs" path="res://assets/coin.png" id="11_le4nd"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sgapj"]
+texture = ExtResource("5_7sstw")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m2clr"]
+texture = ExtResource("6_1kc4b")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_u15kr"]
+sources/0 = SubResource("TileSetAtlasSource_sgapj")
+sources/1 = SubResource("TileSetAtlasSource_m2clr")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a35rc"]
+atlas = ExtResource("8_6v5jo")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qg8p7"]
+atlas = ExtResource("8_6v5jo")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lsi5"]
+atlas = ExtResource("8_6v5jo")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ov7yr"]
+atlas = ExtResource("8_6v5jo")
+region = Rect2(144, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cfrn"]
+atlas = ExtResource("8_6v5jo")
+region = Rect2(192, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1unn"]
+atlas = ExtResource("8_6v5jo")
+region = Rect2(240, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ni0hb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a35rc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qg8p7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lsi5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ov7yr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1cfrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1unn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p65wq"]
+atlas = ExtResource("9_xj1nf")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8obr"]
+atlas = ExtResource("9_xj1nf")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uuymi"]
+atlas = ExtResource("9_xj1nf")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wuhnk"]
+atlas = ExtResource("9_xj1nf")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7xrdn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p65wq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8obr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uuymi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wuhnk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wltse"]
+atlas = ExtResource("10_sjb8i")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnjwv"]
+atlas = ExtResource("10_sjb8i")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8fpe"]
+atlas = ExtResource("10_sjb8i")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnsry"]
+atlas = ExtResource("10_sjb8i")
+region = Rect2(144, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwbn1"]
+atlas = ExtResource("10_sjb8i")
+region = Rect2(192, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_381vk"]
+atlas = ExtResource("10_sjb8i")
+region = Rect2(240, 48, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f2jeu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wltse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gnjwv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8fpe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnsry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwbn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_381vk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gqwv"]
+atlas = ExtResource("11_le4nd")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oey4r"]
+atlas = ExtResource("11_le4nd")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mww8"]
+atlas = ExtResource("11_le4nd")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_527wm"]
+atlas = ExtResource("11_le4nd")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11cy8"]
+atlas = ExtResource("11_le4nd")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ch863"]
+atlas = ExtResource("11_le4nd")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8b7kq"]
+atlas = ExtResource("11_le4nd")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yan20"]
+atlas = ExtResource("11_le4nd")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o64y2"]
+atlas = ExtResource("11_le4nd")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe66e"]
+atlas = ExtResource("11_le4nd")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b225q"]
+atlas = ExtResource("11_le4nd")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr3q6"]
+atlas = ExtResource("11_le4nd")
+region = Rect2(176, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5dikd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gqwv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oey4r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mww8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_527wm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11cy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ch863")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8b7kq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yan20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o64y2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe66e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b225q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mr3q6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_ribdw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TitleImage" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -88.0
+offset_top = 24.0
+offset_right = 88.0
+offset_bottom = 56.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_dautm")
+expand_mode = 3
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/TitleImage"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_06xix")
+theme_override_font_sizes/font_size = 16
+text = "Coin Clash"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -36.0
+offset_right = 50.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_m2dir")
+
+[node name="PlayLabel" type="Label" parent="CanvasLayer/PlayButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_06xix")
+theme_override_font_sizes/font_size = 8
+text = "Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InstructionButton" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -4.0
+offset_right = 50.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_m2dir")
+
+[node name="InstructionLabel" type="Label" parent="CanvasLayer/InstructionButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_06xix")
+theme_override_font_sizes/font_size = 8
+text = "How to Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MuteButton" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 28.0
+offset_right = 50.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_m2dir")
+
+[node name="MuteLabel" type="Label" parent="CanvasLayer/MuteButton"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_06xix")
+theme_override_font_sizes/font_size = 8
+text = "Mute"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CreditsButton" type="TextureButton" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 60.0
+offset_right = 50.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_m2dir")
+
+[node name="CreditsLabel" type="Label" parent="CanvasLayer/CreditsButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_06xix")
+theme_override_font_sizes/font_size = 8
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.705882, 0.705882, 0.705882, 1)
+blend_mode = 1
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_u15kr")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 196609, 1, 131072, 0, 0, 196608, 0, 0, 262144, 0, 0, 327680, 0, 0, 393216, 131073, 0, 458752, 131073, 0, 524288, 1, 0, 589824, 0, 0, 655360, 0, 0, 720896, 0, 0, 786432, 0, 0, 851968, 0, 0, 1, 0, 0, 65537, 0, 0, 131073, 0, 0, 196609, 196609, 1, 262145, 65537, 0, 327681, 0, 0, 393217, 0, 0, 458753, 0, 0, 524289, 0, 0, 589825, 0, 0, 655361, 0, 0, 720897, 196609, 2, 786433, 1, 0, 851969, 0, 0, 2, 65537, 0, 65538, 196609, 0, 131074, 0, 0, 196610, 0, 0, 262146, 65537, 0, 327682, 0, 0, 393218, 131073, 2, 458754, 0, 0, 524290, 0, 0, 589826, 0, 0, 655362, 0, 0, 720898, 0, 0, 786434, 0, 0, 851970, 0, 0, 3, 0, 0, 65539, 0, 0, 131075, 0, 0, 196611, 0, 0, 262147, 131073, 0, 327683, 131073, 2, 393219, 0, 0, 458755, 0, 0, 524291, 0, 0, 589827, 0, 0, 655363, 65537, 2, 720899, 0, 0, 786435, 0, 0, 851971, 0, 0, 4, 0, 0, 65540, 0, 0, 131076, 65537, 0, 196612, 0, 0, 262148, 0, 0, 327684, 0, 0, 393220, 0, 0, 458756, 0, 0, 524292, 0, 0, 589828, 65537, 0, 655364, 196609, 1, 720900, 0, 0, 786436, 0, 0, 851972, 0, 0, 5, 0, 0, 65541, 0, 0, 131077, 0, 0, 196613, 131073, 2, 262149, 131073, 0, 327685, 0, 0, 393221, 0, 0, 458757, 0, 0, 524293, 0, 0, 589829, 0, 0, 655365, 0, 0, 720901, 0, 0, 786437, 0, 0, 851973, 0, 0, 6, 0, 0, 65542, 196609, 2, 131078, 65537, 0, 196614, 0, 0, 262150, 0, 0, 327686, 0, 0, 393222, 0, 0, 458758, 0, 0, 524294, 0, 0, 589830, 0, 0, 655366, 0, 0, 720902, 0, 0, 786438, 0, 0, 851974, 1, 2, 7, 0, 0, 65543, 0, 0, 131079, 0, 0, 196615, 0, 0, 262151, 131073, 0, 327687, 0, 0, 393223, 0, 0, 458759, 0, 0, 524295, 0, 0, 589831, 196609, 0, 655367, 0, 0, 720903, 0, 0, 786439, 196609, 0, 851975, 65537, 2, 8, 0, 0, 65544, 0, 0, 131080, 0, 0, 196616, 196609, 1, 262152, 0, 0, 327688, 0, 0, 393224, 0, 0, 458760, 0, 0, 524296, 0, 0, 589832, 0, 0, 655368, 0, 0, 720904, 0, 0, 786440, 0, 0, 851976, 196609, 0, 9, 196609, 2, 65545, 0, 0, 131081, 0, 0, 196617, 0, 0, 262153, 0, 0, 327689, 1, 2, 393225, 65537, 2, 458761, 0, 0, 524297, 65537, 0, 589833, 0, 0, 655369, 0, 0, 720905, 0, 0, 786441, 0, 0, 851977, 0, 0, 10, 0, 0, 65546, 65537, 0, 131082, 0, 0, 196618, 0, 0, 262154, 0, 0, 327690, 196609, 2, 393226, 0, 0, 458762, 65537, 0, 524298, 0, 0, 589834, 0, 0, 655370, 0, 0, 720906, 0, 0, 786442, 0, 0, 851978, 0, 0, 11, 0, 0, 65547, 1, 0, 131083, 65537, 0, 196619, 131073, 0, 262155, 0, 0, 327691, 0, 0, 393227, 131073, 0, 458763, 0, 0, 524299, 0, 0, 589835, 131073, 0, 655371, 131073, 0, 720907, 65537, 2, 786443, 196609, 0, 851979, 65537, 2, 12, 0, 0, 65548, 0, 0, 131084, 1, 0, 196620, 0, 0, 262156, 0, 0, 327692, 0, 0, 393228, 196609, 0, 458764, 0, 0, 524300, 1, 0, 589836, 0, 0, 655372, 65537, 0, 720908, 0, 0, 786444, 0, 0, 851980, 0, 0, 13, 196609, 0, 65549, 0, 0, 131085, 196609, 0, 196621, 0, 0, 262157, 0, 0, 327693, 0, 0, 393229, 0, 0, 458765, 0, 0, 524301, 0, 0, 589837, 1, 0, 655373, 0, 0, 720909, 0, 0, 786445, 0, 0, 851981, 0, 0, 14, 0, 0, 65550, 0, 0, 131086, 0, 0, 196622, 0, 0, 262158, 0, 0, 327694, 131073, 0, 393230, 0, 0, 458766, 65537, 0, 524302, 0, 0, 589838, 0, 0, 655374, 0, 0, 720910, 65537, 2, 786446, 0, 0, 851982, 0, 0, 15, 0, 0, 65551, 0, 0, 131087, 1, 0, 196623, 1, 2, 262159, 65537, 2, 327695, 0, 0, 393231, 0, 0, 458767, 65537, 2, 524303, 0, 0, 589839, 0, 0, 655375, 0, 0, 720911, 131073, 0, 786447, 0, 0, 851983, 0, 0, 16, 0, 0, 65552, 0, 0, 131088, 0, 0, 196624, 0, 0, 262160, 0, 0, 327696, 0, 0, 393232, 0, 0, 458768, 0, 0, 524304, 0, 0, 589840, 0, 0, 655376, 0, 0, 720912, 0, 0, 786448, 131073, 0, 851984, 0, 0, 17, 0, 0, 65553, 65537, 0, 131089, 0, 0, 196625, 0, 0, 262161, 0, 0, 327697, 0, 0, 393233, 0, 0, 458769, 0, 0, 524305, 0, 0, 589841, 0, 0, 655377, 0, 0, 720913, 0, 0, 786449, 0, 0, 851985, 131073, 0, 18, 0, 0, 65554, 0, 0, 131090, 0, 0, 196626, 0, 0, 262162, 0, 0, 327698, 0, 0, 393234, 131073, 0, 458770, 0, 0, 524306, 196609, 0, 589842, 131073, 0, 655378, 65537, 0, 720914, 0, 0, 786450, 0, 0, 851986, 0, 0, 19, 0, 0, 65555, 0, 0, 131091, 0, 0, 196627, 196609, 0, 262163, 0, 0, 327699, 0, 0, 393235, 0, 0, 458771, 0, 0, 524307, 0, 0, 589843, 0, 0, 655379, 0, 0, 720915, 131073, 0, 786451, 0, 0, 851987, 0, 0, 20, 0, 0, 65556, 0, 0, 131092, 0, 0, 196628, 0, 0, 262164, 0, 0, 327700, 0, 0, 393236, 0, 0, 458772, 131073, 2, 524308, 0, 0, 589844, 0, 0, 655380, 1, 0, 720916, 0, 0, 786452, 0, 0, 851988, 0, 0, 21, 0, 0, 65557, 0, 0, 131093, 0, 0, 196629, 0, 0, 262165, 0, 0, 327701, 0, 0, 393237, 0, 0, 458773, 0, 0, 524309, 0, 0, 589845, 0, 0, 655381, 0, 0, 720917, 0, 0, 786453, 0, 0, 851989, 0, 0, 22, 0, 0, 65558, 131073, 0, 131094, 0, 0, 196630, 65537, 0, 262166, 196609, 0, 327702, 0, 0, 393238, 0, 0, 458774, 196609, 0, 524310, 0, 0, 589846, 131073, 0, 655382, 196609, 0, 720918, 0, 0, 786454, 0, 0, 851990, 0, 0, 23, 0, 0, 65559, 0, 0, 131095, 0, 0, 196631, 0, 0, 262167, 0, 0, 327703, 196609, 2, 393239, 0, 0, 458775, 0, 0, 524311, 0, 0, 589847, 0, 0, 655383, 0, 0, 720919, 0, 0, 786455, 0, 0, 851991, 131073, 2, 24, 0, 0, 65560, 196609, 1, 131096, 0, 0, 196632, 131073, 2, 262168, 196609, 1, 327704, 0, 0, 393240, 0, 0, 458776, 0, 0, 524312, 0, 0, 589848, 196609, 0, 655384, 0, 0, 720920, 0, 0, 786456, 0, 0, 851992, 0, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_1nicq")
+autoplay = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(90, 142)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ni0hb")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(48, 83)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_7xrdn")
+autoplay = "default"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(292, 89)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_f2jeu")
+autoplay = "default"
+flip_h = true
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+position = Vector2(343, 166)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_5dikd")
+autoplay = "default"
+
+[connection signal="button_up" from="CanvasLayer/PlayButton" to="." method="_on_play_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/InstructionButton" to="." method="_on_instruction_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/MuteButton" to="." method="_on_mute_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/CreditsButton" to="." method="_on_credits_button_button_up"]
